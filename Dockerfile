@@ -1,6 +1,5 @@
-FROM node:16-buster as builder
+FROM public.ecr.aws/lambda/nodejs:14-arm64
 
-RUN apt update && apt install -y cmake
 WORKDIR /app
 COPY package.json /app
 RUN npm install
